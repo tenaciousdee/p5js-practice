@@ -2,7 +2,7 @@ var particles = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (var i = 0; i < 170; i++) {
+  for (var i = 0; i < 250; i++) {
     particles.push(new Particle(createVector(random(width), random(height))));
   }
 }
@@ -39,7 +39,7 @@ Particle.prototype.update = function () {
   if (this.position.y > height) this.position.y = 0;
 };
 
-Particle.protoype.intersects = function () {
+Particle.prototype.intersects = function () {
   for (var i = 0; i < particles.length; i++) {
     var other = particles[i];
     if (other != this) {
@@ -49,7 +49,7 @@ Particle.protoype.intersects = function () {
         this.applyForce(dir);
         if (dir.mag() < 100) {
           stroke(255, 50);
-          strokeWeight(0.5);
+          strokeWeight(1);
           line(this.position.x, this.position.y, other.position.x, other.position.y);
         }
       }
