@@ -1,7 +1,11 @@
 html, body{
   padding: 0;
   margin: 0;
-  background: #6E6C6D center center fixed;
+  background-image:
+    linear-gradient(
+      to top right,
+      #F8AD8F, #FAEDD5
+    );
   font-family: 'Oswald', sans-serif;
   line-height: 1.5em;
   font-size: 1.5em;

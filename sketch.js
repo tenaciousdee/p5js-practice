@@ -49,7 +49,7 @@ Particle.prototype.intersects = function () {
         this.applyForce(dir);
         if (dir.mag() < 100) {
           stroke(255, 50);
-          strokeWeight(1);
+          strokeWeight(0.5);
           line(this.position.x, this.position.y, other.position.x, other.position.y);
         }
       }
@@ -69,7 +69,7 @@ Particle.prototype.display = function () {
   var dir = p5.Vector.sub(this.position, mPos);
   if (dir.mag() < 160) {
     stroke(255, 70);
-    strokeWeight(0.5);
+    strokeWeight(2);
     line(this.position.x, this.position.y, mouseX, mouseY);
   }
 };
