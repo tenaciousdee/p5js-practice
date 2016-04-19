@@ -37,3 +37,20 @@ Particle.protoype.intersects = function () {
     }
   }
 };
+
+Particle.prototype.applyForce = function (f) {
+  this.acceleration.add(f);
+};
+
+Particle.prototype.display = function () {
+  noStroke();
+  fill(255, 200);
+  ellipse(this.position.x, this.position.y, 4, 4);
+  var mPos = createVector(mouseX, mouseY);
+  var dir = p5.Vector.sub(this.position, mPos);
+  if (dir.mag() < 160) {
+    stroke(255, 70);
+    strokeWeight(0.5);
+    line(this.position.x, this.position.y, mouseX, mouseY);
+  }
+};
