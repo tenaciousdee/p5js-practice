@@ -1,0 +1,28 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  background: #6E6C6D center center fixed;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#wrapper {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#content {
+  height: 10em;
+  max-width: 48em;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
