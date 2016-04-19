@@ -1,3 +1,22 @@
+var particles = [];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  for (var i = 0; i < 170; i++) {
+    particles.push(new Particle(createVector(random(width), random(height))));
+  }
+}
+
+function draw() {
+  clear();
+  background(0, 0);
+  var p;
+  for (var i = particles.length - 1; i >= 0; i--) {
+    p = particles[i];
+    p.run();
+  }
+}
+
 var Particle = function (position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
